@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Institute FAQ Chatbot — Get instant answers to your questions about admissions, exams, hostel, fees, scholarships, and more.">
+    <title>Institute FAQ Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- ── Header ──────────────────────────────────────── -->
+        <header class="chat-header">
+            <div class="header-left">
+                <div class="bot-avatar">
+                    <span class="avatar-icon">🎓</span>
+                    <span class="status-dot"></span>
+                </div>
+                <div class="header-info">
+                    <h1>Institute FAQ Bot</h1>
+                    <p class="header-subtitle">Ask me anything about the institute</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="resetBtn" class="reset-btn" title="New conversation">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="23 4 23 10 17 10"></polyline>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- ── Chat Messages ────────────────────────────────── -->
+        <main class="chat-messages" id="chatMessages">
+            <div class="welcome-card">
+                <div class="welcome-icon">🤖</div>
+                <h2>Welcome to Institute FAQ Bot!</h2>
+                <p>I can help you with questions about:</p>
+                <div class="topic-chips">
+                    <button class="topic-chip" data-query="What is the admission process?">📋 Admissions</button>
+                    <button class="topic-chip" data-query="What are the tuition fees?">💰 Fees</button>
+                    <button class="topic-chip" data-query="When are the exams scheduled?">📝 Exams</button>
+                    <button class="topic-chip" data-query="Tell me about hostel facilities">🏠 Hostel</button>
+                    <button class="topic-chip" data-query="What scholarships are available?">🎓 Scholarships</button>
+                    <button class="topic-chip" data-query="Does the college have a placement cell?">💼 Placements</button>
+                    <button class="topic-chip" data-query="What are the college timings?">🕐 Timings</button>
+                    <button class="topic-chip" data-query="How do I contact the administration?">📞 Contact</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- ── Input Area ────────────────────────────────────── -->
+        <footer class="chat-input-area">
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type your question here..." autocomplete="off" autofocus>
+                <button id="sendBtn" class="send-btn" title="Send message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <p class="input-hint">Press Enter to send • Click a topic chip above to get started</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
